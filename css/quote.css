@@ -1,0 +1,48 @@
+* {
+  transition: all 250ms ease-in-out;
+}
+
+
+#block_first{
+  position: absolute;
+  margin-top: -30px;
+  left: 900px;
+}
+
+.block {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+.block .citation {
+  font-size: 25px;
+  line-height: 35px;
+}
+.block .author {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  line-height: 35px;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  opacity: 0;
+}
+
+.first:hover .citation {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  letter-spacing: 1px;
+}
+.first:hover .author {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.login{
+  position: absolute;
+  right: 10px;
+}
