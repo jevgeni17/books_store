@@ -16,6 +16,8 @@ require_once "starter.php";
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <style type="text/css">
   .langItem{
   	text-transform: uppercase;
@@ -23,11 +25,8 @@ require_once "starter.php";
   	font-weight: 50;
   	margin-right: 20px;
   }
-  .langItem:hover{
-  	color:red;
-  }
-	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  </style>
+
   <style type="text/css">
 
 /********************* Shopping Demo-4 **********************/
@@ -63,8 +62,7 @@ require_once "starter.php";
 .product-grid4 .add-to-cart:hover{background-color:#505050;box-shadow:0 0 10px rgba(0,0,0,.5)}
 
 </style>
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -81,17 +79,32 @@ require_once "starter.php";
      <li class="nav-item active">
        <a class="nav-link" href="#"><?php include "languages.php" ?> <span class="sr-only">(current)</span></a>
      </li>
-     <li class="nav-item">
-       <a class="nav-link" href="#">Link</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link disabled" href="#">Disabled</a>
-     </li>
    </ul>
-   <form class="form-inline mt-2 mt-md-0">
-     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-   </form>
+   <ul class="nav navbar-nav flex-row justify-content-between ml-auto" >
+
+                   <li class="dropdown order-1">
+                       <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+                       <ul class="dropdown-menu dropdown-menu-right mt-2">
+                          <li class="px-3 py-2">
+                              <form class="form" role="form">
+                                   <div class="form-group">
+                                       <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="email" required="required">
+                                   </div>
+                                   <div class="form-group">
+                                       <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="required">
+                                   </div>
+                                   <div class="form-group">
+                                       <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                   </div>
+                                   <div class="form-group text-center">
+                                       <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small><br>
+                                       <small><a href="#" data-toggle="modal" data-target="#modalPassword">Register now</a></small>
+                                   </div>
+                               </form>
+                           </li>
+                       </ul>
+                   </li>
+               </ul>
  </div>
 </nav>
 
@@ -159,33 +172,7 @@ require_once "starter.php";
     </div>';
         }
         ?>
-        <div class="row" style="margin-top:20px;">
-                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/1.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/3.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
+
 
   </main>
 
