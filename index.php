@@ -16,6 +16,7 @@ require_once "starter.php";
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/nav_menuu.css">
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <style type="text/css">
@@ -81,40 +82,77 @@ require_once "starter.php";
      </li>
    </ul>
    <ul class="nav navbar-nav flex-row justify-content-between ml-auto" >
-
-                   <li class="dropdown order-1">
-                       <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
-                       <ul class="dropdown-menu dropdown-menu-right mt-2">
-                          <li class="px-3 py-2">
-                              <form class="form" role="form">
-                                   <div class="form-group">
-                                       <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="email" required="required">
-                                   </div>
-                                   <div class="form-group">
-                                       <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="required">
-                                   </div>
-                                   <div class="form-group">
-                                       <button type="submit" class="btn btn-primary btn-block">Login</button>
-                                   </div>
-                                   <div class="form-group text-center">
-                                       <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small><br>
-                                       <small><a href="#" data-toggle="modal" data-target="#modalPassword">Register now</a></small>
-                                   </div>
-                               </form>
-                           </li>
-                       </ul>
-                   </li>
-               </ul>
+     <li class="dropdown order-1">
+         <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+         <ul class="dropdown-menu dropdown-menu-right mt-2">
+            <li class="px-3 py-2">
+                <form class="form" role="form">
+                     <div class="form-group">
+                         <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="email" required="required">
+                     </div>
+                     <div class="form-group">
+                         <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="required">
+                     </div>
+                     <div class="form-group">
+                         <button type="submit" class="btn btn-primary btn-block">Login</button>
+                     </div>
+                     <div class="form-group text-center">
+                         <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small><br>
+                         <small><a href="#" data-toggle="modal" data-target="#modalPassword">Register now</a></small>
+                     </div>
+                 </form>
+             </li>
+         </ul>
+     </li>
+ </ul>
  </div>
 </nav>
 
+
 </header>
   <!-- Page Content -->
-  <main role="main" class="container">
-    <div class="row">
-      <?php include "languages.php" ?>
+  <main role="main" class="container-fluid">
 
-			</div>
+
+      <div class="container-fluid">
+          <div class="col-sm-2 col-md-2">
+            <nav id="sidebar">
+
+                        <div class="sidebar-header">
+                            <h3>Bootstrap Sidebar</h3>
+                        </div>
+
+                        <ul class="list-unstyled components">
+                            <!--<p>Dummy Heading</p>-->
+                            <li class="active">
+                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Books</a>
+                                <ul class="collapse list-unstyled" id="homeSubmenu">
+                                    <li><a href="#">Home 1</a></li>
+                                    <li class="active"><a href="#">Home 2</a></li>
+                                    <li><a href="#">Home 3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                                <ul class="collapse list-unstyled" id="pageSubmenu">
+                                    <li><a href="#">Page 1</a></li>
+                                    <li><a href="#">Page 2</a></li>
+                                    <li><a href="#">Page 3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+
+
+                    </nav>
+          </div>
+</div>
 
       <div class="container">
 
@@ -145,6 +183,7 @@ require_once "starter.php";
                 <span class="sr-only">Next</span>
               </a>
             </div>
+
       </div>
         <div class="row">
         <?php
@@ -173,6 +212,8 @@ require_once "starter.php";
         }
         ?>
 
+      </div>
+</div>
 
   </main>
 
@@ -185,6 +226,8 @@ require_once "starter.php";
 	</script>
 	<script language="javascript" src="js/bootstrap.min.js">
 	</script>
+  
+  <script  src="js/nav_menu.js"></script>
 
 
 </body>
