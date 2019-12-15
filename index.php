@@ -117,38 +117,38 @@ require_once "starter.php";
       <div class="container-fluid">
           <div class="col-sm-2 col-md-2">
             <nav id="sidebar">
+                <?php
 
-                        <div class="sidebar-header">
+                $ln=$_GET['ln'];
+                $articlesTable=mysqli_query($link, "SELECT term FROM terms WHERE lang='$ln' AND code='books' ");
+                while($oneArticle=mysqli_fetch_assoc($articlesTable)){
+                    echo    '<div class="sidebar-header">
                             <h3>Bootstrap Sidebar</h3>
                         </div>
 
                         <ul class="list-unstyled components">
                             <!--<p>Dummy Heading</p>-->
                             <li class="active">
-                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Books</a>
+                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">'.$terms['books'].'</a>
                                 <ul class="collapse list-unstyled" id="homeSubmenu">
-                                    <li><a href="#">Home 1</a></li>
-                                    <li class="active"><a href="#">Home 2</a></li>
-                                    <li><a href="#">Home 3</a></li>
+                                    <li><a href="#">Crime</a></li>
+                                    <li ><a href="#">Romance</a></li>
+                                    <li><a href="#">Adventures</a></li>
+                                    <li><a href="#">Fantasy</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">About</a>
-                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">About</a>
                                 <ul class="collapse list-unstyled" id="pageSubmenu">
                                     <li><a href="#">Page 1</a></li>
                                     <li><a href="#">Page 2</a></li>
                                     <li><a href="#">Page 3</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#">Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        </ul>
 
+                        </ul>';
+                      }
+                        ?>
 
                     </nav>
           </div>

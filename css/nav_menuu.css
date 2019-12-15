@@ -35,7 +35,7 @@
 #sidebar ul li a:hover {
 	border-left: 3px solid #009688;
 	color: #1d2129;
-	background: #fff;
+	background: black;
 }
 
 #sidebar ul li.active>a, a[aria-expanded="true"] {
