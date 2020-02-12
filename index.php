@@ -1,235 +1,519 @@
-<?php
-require_once "connect.php";
-require_once "starter.php";
-?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<html>
+    <!-- Bootstrap CSS -->
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Awesome</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/nav_menuu.css">
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <style type="text/css">
-  .langItem{
-  	text-transform: uppercase;
-  	font-size: 15px;
-  	font-weight: 50;
-  	margin-right: 20px;
-  }
-  </style>
-
-  <style type="text/css">
-
-/********************* Shopping Demo-4 **********************/
-.product-grid4,.product-grid4 .product-image4{position:relative}
-.product-grid4{font-family:Poppins,sans-serif;text-align:center;border-radius:5px;overflow:hidden;z-index:1;transition:all .3s ease 0s}
-.product-grid4:hover{box-shadow:0 0 10px #16A085}
-.product-grid4 .product-image4 a{display:block}
-.product-grid4 .product-image4 img{width:100%;height:auto}
-.product-grid4 .social{width:180px;padding:0;margin:0 auto;list-style:none;position:absolute;right:0;left:0;top:50%;transform:translateY(-50%);transition:all .3s ease 0s}
-.product-grid4 .social li{display:inline-block;opacity:0;transition:all .7s}
-.product-grid4 .social li:nth-child(1){transition-delay:.15s}
-.product-grid4 .social li:nth-child(2){transition-delay:.3s}
-.product-grid4 .social li:nth-child(3){transition-delay:.45s}
-
-.product-grid4 .social li a{color:#222;background:#fff;font-size:17px;line-height:36px;width:40px;height:36px;border-radius:2px;margin:0 5px;display:block;transition:all .3s ease 0s}
-.product-grid4 .social li a:hover{color:#fff;background:#16a085}
-.product-grid4 .social li a:after,.product-grid4 .social li a:before{content:attr(data-tip);color:#fff;background-color:#000;font-size:12px;line-height:20px;border-radius:3px;padding:0 5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
-.product-grid4 .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-22px;z-index:-1}
-.product-grid4 .social li a:hover:after,.product-grid4 .social li a:hover:before{opacity:1}
-.product-grid4 .product-discount-label,.product-grid4 .product-new-label{color:#fff;background-color:#16a085;font-size:13px;font-weight:800;text-transform:uppercase;line-height:45px;height:45px;width:45px;border-radius:50%;position:absolute;left:10px;top:15px;transition:all .3s}
-.product-grid4 .product-discount-label{left:auto;right:10px;background-color:#d7292a}
-
-.product-grid4 .product-content{padding:25px}
-.product-grid4 .title{font-size:15px;font-weight:400;text-transform:capitalize;margin:0 0 7px;transition:all .3s ease 0s}
-.product-grid4 .title a{color:#222}
-.product-grid4 .title a:hover{color:#16a085}
-.product-grid4 .price{color:#16a085;font-size:17px;font-weight:700;margin:0 2px 15px 0;display:block}
-.product-grid4 .price span{color:#909090;font-size:13px;font-weight:400;letter-spacing:0;text-decoration:line-through;text-align:left;vertical-align:middle;display:inline-block}
-.product-grid4 .name{color:#16a085;font-size:17px;font-weight:700;margin:0 2px 15px 0;display:block}
-.product-grid4 .name span{color:#909090;font-size:13px;font-weight:400;letter-spacing:0;text-decoration:line-through;text-align:left;vertical-align:middle;display:inline-block}
-.product-grid4 .add-to-cart{border:1px solid #e5e5e5;display:inline-block;padding:10px 20px;color:#888;font-weight:600;font-size:14px;border-radius:4px;transition:all .3s}
-.product-grid4:hover .add-to-cart{border:1px solid transparent;background:#16a085;color:#fff}
-.product-grid4 .add-to-cart:hover{background-color:#505050;box-shadow:0 0 10px rgba(0,0,0,.5)}
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/themify-icons.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+	<style type="text/css">
+body {
+	background: #e2eaef;
+	font-family: "Open Sans", sans-serif;
+}
+h2 {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 60px;
+}
+h2::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	border-radius: 1px;
+	background: #7ac400;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	color: #747d89;
+	min-height: 325px;
+    text-align: center;
+	overflow: hidden;
+}
+.carousel .thumb-wrapper {
+	padding: 25px 15px;
+	background: #fff;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+.carousel .item .img-box {
+	height: 120px;
+	margin-bottom: 20px;
+	width: 100%;
+	position: relative;
+}
+.carousel .item img {	
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 18px;
+}
+.carousel .item h4, .carousel .item p, .carousel .item ul {
+	margin-bottom: 5px;
+}
+.carousel .thumb-content .btn {
+	color: #7ac400;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #7ac400;
+    padding: 6px 14px;
+    margin-top: 5px;
+    line-height: 16px;
+    border-radius: 20px;
+}
+.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
+	color: #fff;
+	background: #7ac400;
+	box-shadow: none;
+}
+.carousel .thumb-content .btn i {
+	font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.carousel .carousel-control {
+	height: 44px;
+	width: 40px;
+	background: #7ac400;	
+    margin: auto 0;
+    border-radius: 4px;
+	opacity: 0.8;
+}
+.carousel .carousel-control:hover {
+	background: #78bf00;
+	opacity: 1;
+}
+.carousel .carousel-control i {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -19px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: #fff;
+	text-shadow: none;
+    font-weight: bold;
+}
+.carousel .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.carousel .item-price strike {
+	opacity: 0.7;
+	margin-right: 5px;
+}
+.carousel .carousel-control.left i {
+	margin-left: -2px;
+}
+.carousel .carousel-control.right i {
+	margin-right: -4px;
+}
+.carousel .carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border: none;
+}
+.carousel-indicators li {	
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+.carousel .wish-icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 99;
+	cursor: pointer;
+	font-size: 16px;
+	color: #abb0b8;
+}
+.carousel .wish-icon .fa-heart {
+	color: #ff6161;
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
 </style>
-
-</head>
-
-<body>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<header>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-
- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-   <span class="navbar-toggler-icon"></span>
- </button>
- <div class="collapse navbar-collapse" id="navbarCollapse">
-   <ul class="navbar-nav mr-auto">
-     <li class="nav-item active">
-       <a class="nav-link" href="#"><?php include "languages.php" ?> <span class="sr-only">(current)</span></a>
-     </li>
-   </ul>
-   <ul class="nav navbar-nav flex-row justify-content-between ml-auto" >
-     <li class="dropdown order-1">
-         <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
-         <ul class="dropdown-menu dropdown-menu-right mt-2">
-            <li class="px-3 py-2">
-                <form class="form" role="form">
-                     <div class="form-group">
-                         <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="email" required="required">
-                     </div>
-                     <div class="form-group">
-                         <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="required">
-                     </div>
-                     <div class="form-group">
-                         <button type="submit" class="btn btn-primary btn-block">Login</button>
-                     </div>
-                     <div class="form-group text-center">
-                         <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small><br>
-                         <small><a href="#" data-toggle="modal" data-target="#modalPassword">Register now</a></small>
-                     </div>
-                 </form>
-             </li>
-         </ul>
-     </li>
- </ul>
- </div>
-</nav>
-
-
-</header>
-  <!-- Page Content -->
-  <main role="main" class="container-fluid">
-
-
-      <div class="container-fluid">
-          <div class="col-sm-2 col-md-2">
-            <nav id="sidebar">
-
-                        <div class="sidebar-header">
-                            <h3>Bootstrap Sidebar</h3>
-                        </div>
-
-                        <ul class="list-unstyled components">
-                            <!--<p>Dummy Heading</p>-->
-                            <li class="active">
-                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Books</a>
-                                <ul class="collapse list-unstyled" id="homeSubmenu">
-                                    <li><a href="#">Home 1</a></li>
-                                    <li class="active"><a href="#">Home 2</a></li>
-                                    <li><a href="#">Home 3</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">About</a>
-                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                                <ul class="collapse list-unstyled" id="pageSubmenu">
-                                    <li><a href="#">Page 1</a></li>
-                                    <li><a href="#">Page 2</a></li>
-                                    <li><a href="#">Page 3</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        </ul>
-
-
-                    </nav>
-          </div>
-</div>
-
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".wish-icon i").click(function(){
+			$(this).toggleClass("fa-heart fa-heart-o");
+		});
+	});	
+</script>
+  </head>
+  <body >
+  
+      <header class="header_area">
+    <div class="top_menu">
       <div class="container">
-
-          <div class="row">
-            				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/book3.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/book2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/book1.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-
-      </div>
         <div class="row">
-        <?php
-
-        $ln=$_GET['ln'];
-        $articlesTable=mysqli_query($link, "SELECT * FROM articles WHERE lang='$ln' ORDER BY listOrder");
-        while($oneArticle=mysqli_fetch_assoc($articlesTable)){
-
-        	echo '<div class="col-md-3 col-sm-6" style="margin-top:20px;">
-          <div class="product-grid4">
-            <div class="product-image4">
-            <a href="#">
-                <img class="pic-1" src="img/'.$oneArticle['photo'].'">
-
-            </a>
-            <span class="product-new-label">New</span>
+          <div class="col-lg-7">
+            <div class="float-left">
+              <p>Phone: +01 256 25 235</p>
+              <p>email: books@gmail.com</p>
             </div>
-            <div class="product-content">
-                <h4 class="title"><a href="#">'.$oneArticle['title'].'</h4>
-                <h3><div class="name">'.$oneArticle['lead'].'</div></h3>
-                <h2><div class="price">'.$oneArticle['price'].'</div></h2>
-                <a class="add-to-cart" href="#">'.$terms['readNext'].'</a>
+          </div>
+          <div class="col-lg-5 ">
+            <div class="float-right">
+              <ul class="right_side">
+                <li>
+                  <a href="cart.html">
+                    My account
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="contact.html">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-    </div>';
-        }
-        ?>
+      </div>
+    </div>
+	
+    <div class="main_menu">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html">
+            <img src="img/xx (1).png" alt="" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
+            <div class="row w-100 mr-0">
+              <div class="col-lg-7 pr-0">
+                <ul class="nav navbar-nav center_nav pull-right">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="category.html">Shop Category</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="single-product.html">Product Details</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="checkout.html">Product Checkout</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Shopping Cart</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Blog</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="single-blog.html">Blog Details</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="tracking.html">Tracking</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="elements.html">Elements</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-5 pr-0">
+                <ul class="nav navbar-nav navbar-right right_nav pull-right">
+                  <li class="nav-item">
+                    <a href="#" class="icons">
+                      <i class="ti-search" aria-hidden="true"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="icons">
+                      <i class="ti-shopping-cart"></i>
+                    </a>
+                  </li>
+
+                 <!-- <li class="nav-item">
+                    <a href="#" class="icons">
+                      <i class="ti-user" aria-hidden="true"></i>
+                    </a>
+                  </li> -->
+
+                  <!-- <li class="nav-item">
+                    <a href="#" class="icons">
+                      <i class="ti-heart" aria-hidden="true"></i>
+                    </a>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  
+  
+ <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+  
+						
+						<div class="col-2">
+							<div class="thumb-wrapper">
+								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+								<div class="img-box">
+									<img src="img/london_1_est.jpg" class="img-responsive img-fluid" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Sony Headphone</h4>									
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<p class="item-price"><strike>$25.00</strike> <b>$23.99</b></p>
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+						</div>		
+
+  </div> -->
+
+<footer class="page-footer font-small unique-color-dark">
+
+  <div style="background-color: #6351ce;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
 
       </div>
-</div>
+      <!-- Grid row-->
 
-  </main>
+    </div>
+  </div>
 
-  <!-- Bootstrap core JavaScript -->
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script language="javascript" src="js/jquery-3.3.1.slim.min.js">
-	</script>
-	<script language="javascript" src="js/popper.min.js">
-	</script>
-	<script language="javascript" src="js/bootstrap.min.js">
-	</script>
+    <!-- Grid row -->
+    <div class="row mt-3">
 
-  <script  src="js/nav_menu.js"></script>
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">We are here <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.3752653272975!2d24.741266116195845!3d59.42681561024422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692949857a430c7%3A0xd8e2deaa7cd1c82!2z0KLQsNC70LvQuNC90YHQutC40Lkg0L_QvtC70LjRgtC10YXQvdC40LrRg9C8!5e0!3m2!1sru!2see!4v1581284343757!5m2!1sru!2see" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe></h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">MDBootstrap</a>
+        </p>
+        <p>
+          <a href="#!">MDWordPress</a>
+        </p>
+        <p>
+          <a href="#!">BrandFlow</a>
+        </p>
+        <p>
+          <a href="#!">Bootstrap Angular</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Your Account</a>
+        </p>
+        <p>
+          <a href="#!">Become an Affiliate</a>
+        </p>
+        <p>
+          <a href="#!">Shipping Rates</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright ©2020 | All rights reserved
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 
-</body>
+  
+<script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
 
+  <script>
+	$(".navbar-toggler").on("click", function() {
+  $("#navbarSupportedContent").toggle();
+  $(".navbar-toggler").attr("aria-expanded","false");
+});
+  </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+
+  </body>
 </html>
