@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'> <!-- carousel -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/bootstrap.css" />
@@ -15,169 +15,7 @@
 	<link rel="stylesheet" href="css/themify-icons.css" />
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 <link rel="stylesheet" href="css/responsive.css" />
-	<style type="text/css">
-body {
-	background: #e2eaef;
-	font-family: "Open Sans", sans-serif;
-}
-h2 {
-	color: #000;
-	font-size: 26px;
-	font-weight: 300;
-	text-align: center;
-	text-transform: uppercase;
-	position: relative;
-	margin: 30px 0 60px;
-}
-h2::after {
-	content: "";
-	width: 100px;
-	position: absolute;
-	margin: 0 auto;
-	height: 4px;
-	border-radius: 1px;
-	background: #7ac400;
-	left: 0;
-	right: 0;
-	bottom: -20px;
-}
-.carousel {
-	margin: 50px auto;
-	padding: 0 70px;
-}
-.carousel .item {
-	color: #747d89;
-	min-height: 325px;
-    text-align: center;
-	overflow: hidden;
-}
-.carousel .thumb-wrapper {
-	padding: 25px 15px;
-	background: #fff;
-	border-radius: 6px;
-	text-align: center;
-	position: relative;
-	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-}
-.carousel .item .img-box {
-	height: 120px;
-	margin-bottom: 20px;
-	width: 100%;
-	position: relative;
-}
-.carousel .item img {	
-	max-width: 100%;
-	max-height: 100%;
-	display: inline-block;
-	position: absolute;
-	bottom: 0;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-}
-.carousel .item h4 {
-	font-size: 18px;
-}
-.carousel .item h4, .carousel .item p, .carousel .item ul {
-	margin-bottom: 5px;
-}
-.carousel .thumb-content .btn {
-	color: #7ac400;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: bold;
-    background: none;
-    border: 1px solid #7ac400;
-    padding: 6px 14px;
-    margin-top: 5px;
-    line-height: 16px;
-    border-radius: 20px;
-}
-.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
-	color: #fff;
-	background: #7ac400;
-	box-shadow: none;
-}
-.carousel .thumb-content .btn i {
-	font-size: 14px;
-    font-weight: bold;
-    margin-left: 5px;
-}
-.carousel .carousel-control {
-	height: 44px;
-	width: 40px;
-	background: #7ac400;	
-    margin: auto 0;
-    border-radius: 4px;
-	opacity: 0.8;
-}
-.carousel .carousel-control:hover {
-	background: #78bf00;
-	opacity: 1;
-}
-.carousel .carousel-control i {
-    font-size: 36px;
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    margin: -19px 0 0 0;
-    z-index: 5;
-    left: 0;
-    right: 0;
-    color: #fff;
-	text-shadow: none;
-    font-weight: bold;
-}
-.carousel .item-price {
-	font-size: 13px;
-	padding: 2px 0;
-}
-.carousel .item-price strike {
-	opacity: 0.7;
-	margin-right: 5px;
-}
-.carousel .carousel-control.left i {
-	margin-left: -2px;
-}
-.carousel .carousel-control.right i {
-	margin-right: -4px;
-}
-.carousel .carousel-indicators {
-	bottom: -50px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 10px;
-	height: 10px;
-	margin: 4px;
-	border-radius: 50%;
-	border: none;
-}
-.carousel-indicators li {	
-	background: rgba(0, 0, 0, 0.2);
-}
-.carousel-indicators li.active {	
-	background: rgba(0, 0, 0, 0.6);
-}
-.carousel .wish-icon {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	z-index: 99;
-	cursor: pointer;
-	font-size: 16px;
-	color: #abb0b8;
-}
-.carousel .wish-icon .fa-heart {
-	color: #ff6161;
-}
-.star-rating li {
-	padding: 0;
-}
-.star-rating i {
-	font-size: 14px;
-	color: #ffc000;
-}
-</style>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$(".wish-icon i").click(function(){
@@ -322,7 +160,43 @@ h2::after {
     </div>
   </header>
   
-  
+  <div class="container">
+<div class="row">
+<div class="col-md-12 text-center"><h3>Product Carousel</h3></div>
+<div class="col-md-6 col-md-offset-3">
+<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/e499e4/fff&amp;text=1" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/e477e4/fff&amp;text=2" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/eeeeee&amp;text=3" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f4f4f4&amp;text=4" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f566f5/333&amp;text=5" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f477f4/fff&amp;text=6" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/eeeeee&amp;text=7" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&amp;text=8" class="img-responsive"></a></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+</div>
+</div>
+</div>
   
  <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
   
@@ -510,10 +384,12 @@ h2::after {
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script> <!-- carousel -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script><!-- carousel -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  
+    <script  src="js/script.js"></script>
 
   </body>
 </html>
