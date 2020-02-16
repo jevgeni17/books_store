@@ -19,6 +19,8 @@ require_once "connect.php";
     <link rel="stylesheet" href="css/animate.css">
     <!-- owl carousel CSS -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- nice select CSS -->
+    <link rel="stylesheet" href="css/nice-select.css">
     <!-- font awesome CSS -->
     <link rel="stylesheet" href="css/all.css">
     <!-- flaticon CSS -->
@@ -28,6 +30,7 @@ require_once "connect.php";
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- swiper CSS -->
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/price_rangs.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
     
@@ -45,7 +48,11 @@ require_once "connect.php";
 
     <!-- best-sellers-carousel start-->
     <?php
-        include 'parts/best-sellers-carousel.php';
+        if(isset($_GET['categories-crime'])){
+            include 'parts/all-products.php';
+        }else{
+            include 'parts/best-sellers-carousel.php';
+        }
     ?>
     <!-- best-sellers-carousel end-->
 
@@ -72,6 +79,7 @@ require_once "connect.php";
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <!-- slick js -->
+    
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/waypoints.min.js"></script>
@@ -80,6 +88,8 @@ require_once "connect.php";
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/price_rangs.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
 </body>
