@@ -1,519 +1,87 @@
+<?php
+session_start();
+ob_start();
+require_once "connect.php";
+?>
+
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="eng">
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <title>aranoz</title>
+    <link rel="icon" href="img/favicon.png">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="fonts/icons/font-awesome/css/font-awesome.min.css">
+</head>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/bootstrap.css" />
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/themify-icons.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css" />
-<link rel="stylesheet" href="css/responsive.css" />
-	<style type="text/css">
-body {
-	background: #e2eaef;
-	font-family: "Open Sans", sans-serif;
-}
-h2 {
-	color: #000;
-	font-size: 26px;
-	font-weight: 300;
-	text-align: center;
-	text-transform: uppercase;
-	position: relative;
-	margin: 30px 0 60px;
-}
-h2::after {
-	content: "";
-	width: 100px;
-	position: absolute;
-	margin: 0 auto;
-	height: 4px;
-	border-radius: 1px;
-	background: #7ac400;
-	left: 0;
-	right: 0;
-	bottom: -20px;
-}
-.carousel {
-	margin: 50px auto;
-	padding: 0 70px;
-}
-.carousel .item {
-	color: #747d89;
-	min-height: 325px;
-    text-align: center;
-	overflow: hidden;
-}
-.carousel .thumb-wrapper {
-	padding: 25px 15px;
-	background: #fff;
-	border-radius: 6px;
-	text-align: center;
-	position: relative;
-	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-}
-.carousel .item .img-box {
-	height: 120px;
-	margin-bottom: 20px;
-	width: 100%;
-	position: relative;
-}
-.carousel .item img {	
-	max-width: 100%;
-	max-height: 100%;
-	display: inline-block;
-	position: absolute;
-	bottom: 0;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-}
-.carousel .item h4 {
-	font-size: 18px;
-}
-.carousel .item h4, .carousel .item p, .carousel .item ul {
-	margin-bottom: 5px;
-}
-.carousel .thumb-content .btn {
-	color: #7ac400;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: bold;
-    background: none;
-    border: 1px solid #7ac400;
-    padding: 6px 14px;
-    margin-top: 5px;
-    line-height: 16px;
-    border-radius: 20px;
-}
-.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
-	color: #fff;
-	background: #7ac400;
-	box-shadow: none;
-}
-.carousel .thumb-content .btn i {
-	font-size: 14px;
-    font-weight: bold;
-    margin-left: 5px;
-}
-.carousel .carousel-control {
-	height: 44px;
-	width: 40px;
-	background: #7ac400;	
-    margin: auto 0;
-    border-radius: 4px;
-	opacity: 0.8;
-}
-.carousel .carousel-control:hover {
-	background: #78bf00;
-	opacity: 1;
-}
-.carousel .carousel-control i {
-    font-size: 36px;
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    margin: -19px 0 0 0;
-    z-index: 5;
-    left: 0;
-    right: 0;
-    color: #fff;
-	text-shadow: none;
-    font-weight: bold;
-}
-.carousel .item-price {
-	font-size: 13px;
-	padding: 2px 0;
-}
-.carousel .item-price strike {
-	opacity: 0.7;
-	margin-right: 5px;
-}
-.carousel .carousel-control.left i {
-	margin-left: -2px;
-}
-.carousel .carousel-control.right i {
-	margin-right: -4px;
-}
-.carousel .carousel-indicators {
-	bottom: -50px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 10px;
-	height: 10px;
-	margin: 4px;
-	border-radius: 50%;
-	border: none;
-}
-.carousel-indicators li {	
-	background: rgba(0, 0, 0, 0.2);
-}
-.carousel-indicators li.active {	
-	background: rgba(0, 0, 0, 0.6);
-}
-.carousel .wish-icon {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	z-index: 99;
-	cursor: pointer;
-	font-size: 16px;
-	color: #abb0b8;
-}
-.carousel .wish-icon .fa-heart {
-	color: #ff6161;
-}
-.star-rating li {
-	padding: 0;
-}
-.star-rating i {
-	font-size: 14px;
-	color: #ffc000;
-}
-</style>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(".wish-icon i").click(function(){
-			$(this).toggleClass("fa-heart fa-heart-o");
-		});
-	});	
-</script>
-  </head>
-  <body >
-  
-      <header class="header_area">
-    <div class="top_menu">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="float-left">
-              <p>Phone: +01 256 25 235</p>
-              <p>email: books@gmail.com</p>
-            </div>
-          </div>
-          <div class="col-lg-5 ">
-            <div class="float-right">
-              <ul class="right_side">
-                <li>
-                  <a href="cart.html">
-                    My account
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="contact.html">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-	
-    <div class="main_menu">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light w-100">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html">
-            <img src="img/xx (1).png" alt="" />
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
-            <div class="row w-100 mr-0">
-              <div class="col-lg-7 pr-0">
-                <ul class="nav navbar-nav center_nav pull-right">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item submenu dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                      aria-expanded="false">Shop</a>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="category.html">Shop Category</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="single-product.html">Product Details</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="checkout.html">Product Checkout</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Shopping Cart</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item submenu dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                      aria-expanded="false">Blog</a>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="single-blog.html">Blog Details</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item submenu dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                      aria-expanded="false">Pages</a>
-                    <ul class="dropdown-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="tracking.html">Tracking</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="elements.html">Elements</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-5 pr-0">
-                <ul class="nav navbar-nav navbar-right right_nav pull-right">
-                  <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-search" aria-hidden="true"></i>
-                    </a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-shopping-cart"></i>
-                    </a>
-                  </li>
-
-                 <!-- <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-user" aria-hidden="true"></i>
-                    </a>
-                  </li> -->
-
-                  <!-- <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-heart" aria-hidden="true"></i>
-                    </a>
-                  </li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
-  
-  
-  
- <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-  
-						
-						<div class="col-2">
-							<div class="thumb-wrapper">
-								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-								<div class="img-box">
-									<img src="img/london_1_est.jpg" class="img-responsive img-fluid" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>Sony Headphone</h4>									
-									<div class="star-rating">
-										<ul class="list-inline">
-											<li class="list-inline-item"><i class="fa fa-star"></i></li>
-											<li class="list-inline-item"><i class="fa fa-star"></i></li>
-											<li class="list-inline-item"><i class="fa fa-star"></i></li>
-											<li class="list-inline-item"><i class="fa fa-star"></i></li>
-											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-										</ul>
-									</div>
-									<p class="item-price"><strike>$25.00</strike> <b>$23.99</b></p>
-									<a href="#" class="btn btn-primary">Add to Cart</a>
-								</div>						
-							</div>
-						</div>		
-
-  </div> -->
-
-<footer class="page-footer font-small unique-color-dark">
-
-  <div style="background-color: #6351ce;">
-    <div class="container">
-
-      <!-- Grid row-->
-      <div class="row py-4 d-flex align-items-center">
-
-        <!-- Grid column -->
-        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-          <h6 class="mb-0">Get connected with us on social networks!</h6>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-6 col-lg-7 text-center text-md-right">
-
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f white-text mr-4"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter white-text mr-4"> </i>
-          </a>
-          <!-- Google +-->
-          <a class="gplus-ic">
-            <i class="fab fa-google-plus-g white-text mr-4"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic">
-            <i class="fab fa-linkedin-in white-text mr-4"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram white-text"> </i>
-          </a>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row-->
-
-    </div>
-  </div>
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left mt-5">
-
-    <!-- Grid row -->
-    <div class="row mt-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-        <!-- Content -->
-        <h6 class="text-uppercase font-weight-bold">We are here <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.3752653272975!2d24.741266116195845!3d59.42681561024422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692949857a430c7%3A0xd8e2deaa7cd1c82!2z0KLQsNC70LvQuNC90YHQutC40Lkg0L_QvtC70LjRgtC10YXQvdC40LrRg9C8!5e0!3m2!1sru!2see!4v1581284343757!5m2!1sru!2see" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe></h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-        <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold">Products</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>
-          <a href="#!">MDBootstrap</a>
-        </p>
-        <p>
-          <a href="#!">MDWordPress</a>
-        </p>
-        <p>
-          <a href="#!">BrandFlow</a>
-        </p>
-        <p>
-          <a href="#!">Bootstrap Angular</a>
-        </p>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-        <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>
-          <a href="#!">Your Account</a>
-        </p>
-        <p>
-          <a href="#!">Become an Affiliate</a>
-        </p>
-        <p>
-          <a href="#!">Shipping Rates</a>
-        </p>
-        <p>
-          <a href="#!">Help</a>
-        </p>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-        <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold">Contact</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>
-          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-        <p>
-          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-        <p>
-          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">Copyright ©2020 | All rights reserved
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
+<body>
+    
+    <!-- header part start -->
+    <?php
+        include 'parts/header.php';
+    ?>
+    <!-- Header part end-->
 
 
-  
-<script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  
+    <!-- best-sellers-carousel start-->
+    <?php
+        include 'parts/best-sellers-carousel.php';
+    ?>
+    <!-- best-sellers-carousel end-->
 
-  <script>
-	$(".navbar-toggler").on("click", function() {
-  $("#navbarSupportedContent").toggle();
-  $(".navbar-toggler").attr("aria-expanded","false");
-});
-  </script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  
+    <!-- footer part start -->
+    <?php
+        include 'parts/footer.php';
+    ?>
+    <!-- footer part end -->
 
-  </body>
+    <!-- jquery plugins here-->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- slick js -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+</body>
+
 </html>
