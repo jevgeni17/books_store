@@ -7,6 +7,7 @@ require_once 'connect.php';
 					
 					$mail = filter_var(trim($_POST['mail']),FILTER_SANITIZE_STRING);
 					$pass = filter_var(trim($_POST['pass']),FILTER_SANITIZE_STRING);
+					$status = 'user';
 					
 					$query = "SELECT * FROM  `users` WHERE `mail` = '$mail'";
 					$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
@@ -14,21 +15,27 @@ require_once 'connect.php';
 					$user= $result->fetch_assoc();
 
 					if(count($user) == 0){
+						
 						$pass = md5($pass."asdpixcvn23Qc;ljx");
 
-						$query = "INSERT INTO `users` (`mail`, `pass`) VALUES ('$mail','$pass')";# запись данных в б.д
+						$query = "INSERT INTO `users` (`mail`, `password`, `status`) VALUES ('$mail','$pass','$status')";# запись данных в б.д
 						$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+						$_SESSION['user']=$user;
+						//header('Refresh: 3; index.php');
+						echo '<div class="alert alert-success d-flex justify-content-center">Спасибо, вы зарегистрированы в систему.</div>';
+						header('Refresh: 3; index.php?login');
+						
 					}else{
-						echo 'Пользователь с таким почтовым ящиком уже существует!';
+						echo '<div class="alert alert-danger">Пользователь с таким почтовым ящиком уже существует!</div>';
 					}
 				}else{
-					echo 'Пароли не совпадают!';
+					echo '<div class="alert alert-danger">Пароли не совпадают</div>';
 				}
 			}else{
-				echo 'Пожалуйста введите существующий почтовый ящик';
+				echo '<div class="alert alert-danger">Пожайлуйста введите существующий почтовый ящик!</div>';
 			}
 		}else{
-			echo 'Не все поля заполнены!';
+			echo '<div class="alert alert-danger">Не все поля заполнены!</div>';
 		}
 }else{
 	

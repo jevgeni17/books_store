@@ -1,6 +1,6 @@
 <!--================Home Banner Area =================-->
     <!-- breadcrumb start-->
-    <section class="breadcrumb breadcrumb_bg">
+   <!-- <section class="breadcrumb breadcrumb_bg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -29,38 +29,19 @@
                             <div class="widgets_inner">
                                 <ul class="list">
                                     <li>
-                                        <a href="#">Frozen Fish</a>
-                                        <span>(250)</span>
+                                        <a href="#">Crime</a>
+                                        <span>(4)</span>
                                     </li>
                                     <li>
-                                        <a href="#">Dried Fish</a>
-                                        <span>(250)</span>
+                                        <a href="#">Novels</a>
+                                        <span>(4)</span>
                                     </li>
-                                    <li>
-                                        <a href="#">Fresh Fish</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meat Alternatives</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Fresh Fish</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meat Alternatives</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meat</a>
-                                        <span>(250)</span>
-                                    </li>
+                                   
                                 </ul>
                             </div>
                         </aside>
 
-                        <aside class="left_widgets p_filter_widgets">
+                      <!--  <aside class="left_widgets p_filter_widgets">
                             <div class="l_w_title">
                                 <h3>Product filters</h3>
                             </div>
@@ -100,9 +81,9 @@
                                     </li>
                                 </ul>
                             </div>
-                        </aside>
+                        </aside> -->
 
-                        <aside class="left_widgets p_filter_widgets">
+                       <!-- <aside class="left_widgets p_filter_widgets">
                             <div class="l_w_title">
                                 <h3>Color Filter</h3>
                             </div>
@@ -125,7 +106,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </aside>
+                        </aside> -->
 
                         <aside class="left_widgets p_filter_widgets price_rangs_aside">
                             <div class="l_w_title">
@@ -154,18 +135,18 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="product_top_bar d-flex justify-content-between align-items-center">
-                                <div class="single_product_menu">
+                               <!-- <div class="single_product_menu">
                                     <p><span>10000 </span> Prodict Found</p>
-                                </div>
+                                </div> -->
                                 <div class="single_product_menu d-flex">
-                                    <h5>short by : </h5>
+                                    <h5>Sort by : </h5>
                                     <select>
-                                        <option data-display="Select">name</option>
-                                        <option value="1">price</option>
-                                        <option value="2">product</option>
+                                        <option data-display="Select">Ascending</option>
+                                        <option value="1">Descending</option>
+
                                     </select>
                                 </div>
-                                <div class="single_product_menu d-flex">
+                               <!-- <div class="single_product_menu d-flex">
                                     <h5>show :</h5>
                                     <div class="top_pageniation">
                                         <ul>
@@ -184,19 +165,19 @@
                                                     class="ti-search"></i></span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
-
-                    <div class="row align-items-center latest_product_inner">
+ 
+                    <div class="row align-items-center latest_product_inner">       <!-- <i class="ti-heart"></i -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single_product_item">
                                 <img src="img/product/product_1.png" alt="">
                                 <div class="single_product_text">
                                     <h4>Quartz Belt Watch</h4>
                                     <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                    <a href="#" class="add_cart">+ add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +187,7 @@
                                 <div class="single_product_text">
                                     <h4>Quartz Belt Watch</h4>
                                     <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                    <a href="#" class="add_cart">+ add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +197,7 @@
                                 <div class="single_product_text">
                                     <h4>Quartz Belt Watch</h4>
                                     <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                    <a href="#" class="add_cart">+ add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -226,60 +207,11 @@
                                 <div class="single_product_text">
                                     <h4>Quartz Belt Watch</h4>
                                     <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                    <a href="#" class="add_cart">+ add to cart</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_5.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_6.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_7.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_8.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_2.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-12">
                             <div class="pageination">
                                 <nav aria-label="Page navigation example">

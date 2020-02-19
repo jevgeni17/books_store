@@ -2,7 +2,9 @@
 session_start();
 ob_start();
 require_once "connect.php";
+
 ?>
+
 
 <!doctype html>
 <html lang="eng">
@@ -11,8 +13,8 @@ require_once "connect.php";
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>aranoz</title>
-    <link rel="icon" href="img/favicon.png">
+    <title>books_store</title>
+   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- animate CSS -->
@@ -38,30 +40,65 @@ require_once "connect.php";
 </head>
 
 <body>
+
+<?php if(isset($_GET['exit'])){
+	unset($_SESSION['user']);
+} ?>
     
-    <!-- header part start -->
-    <?php
-        include 'parts/header.php';
+    <?php if(isset($_SESSION['user']) && isset($_SESSION['user-status']) && $_SESSION['user-status'] == "admin"): ?>
+    <?php 
+        include 'admin/admin-panel.php';
+        if($_GET['page'] == "languages"){
+            include 'admin/parts/editLanguages.php';
+        }else{
+
+        }
+        
     ?>
-    <!-- Header part end-->
+    <?php else: 
+        
+        
+    
+        include 'parts/header.php';
+    
+    
 
+    
+    if(isset($_GET['login'])){
+        require 'scripts/auth/auth.php';
+        include 'parts/login.php';
+    }
+    
 
-    <!-- best-sellers-carousel start-->
-    <?php
+    
+    if(isset($_GET['registration'])){
+        require_once 'scripts/reg/reg.php';
+        include 'parts/registr.php'; 
+    }
+    
+    
+    
         if(isset($_GET['categories-crime'])){
             include 'parts/all-products.php';
         }else{
             include 'parts/best-sellers-carousel.php';
         }
-    ?>
-    <!-- best-sellers-carousel end-->
+    
+    
+        
 
-
-    <!-- footer part start -->
-    <?php
+    
+    
         include 'parts/footer.php';
+    
+    
+        
+        
+        
     ?>
-    <!-- footer part end -->
+    <?php endif; ?>
+
+    
 
     <!-- jquery plugins here-->
     <script src="js/jquery-1.12.1.min.js"></script>

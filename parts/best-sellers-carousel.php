@@ -14,40 +14,40 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="img/product/product_1.png" alt="">
+                                        <img src="img/product/example.jpeg" alt="">
                                         <div class="single_product_text">
-                                            <h4>Quartz Belt Watch</h4>
-                                            <h3>$150.00</h3>
+                                            <h4>Sherlock Holmes</h4>
+                                            <h3>15.00 €</h3>
                                             <a href="#" class="add_cart">+ add to cart</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="img/product/product_2.png" alt="">
+                                        <img src="img/product/example.jpeg" alt="">
                                         <div class="single_product_text">
-                                            <h4>Quartz Belt Watch</h4>
-                                            <h3>$150.00</h3>
+                                            <h4>Sherlock Holmes</h4>
+                                            <h3>$15.00 €</h3>
                                             <a href="#" class="add_cart">+ add to cart</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="img/product/product_3.png" alt="">
+                                        <img src="img/product/example.jpeg" alt="">
                                         <div class="single_product_text">
-                                            <h4>Quartz Belt Watch</h4>
-                                            <h3>$150.00</h3>
+                                            <h4>Sherlock Holmes</h4>
+                                            <h3>$15.00 €</h3>
                                             <a href="#" class="add_cart">+ add to cart</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="img/product/product_4.png" alt="">
+                                        <img src="img/product/example.jpeg" alt="">
                                         <div class="single_product_text">
-                                            <h4>Quartz Belt Watch</h4>
-                                            <h3>$150.00</h3>
+                                            <h4>Sherlock Holmes</h4>
+                                            <h3>$15.00 €</h3>
                                             <a href="#" class="add_cart">+ add to cart</a>
                                         </div>
                                     </div>
@@ -59,40 +59,40 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="img/product/product_1.png" alt="">
+                                        <img src="img/product/example.jpeg" alt="">
                                         <div class="single_product_text">
-                                            <h4>Quartz Belt Watch</h4>
-                                            <h3>$150.00</h3>
+                                            <h4>Sherlock Holmes</h4>
+                                            <h3>$15.00 €</h3>
                                             <a href="#" class="add_cart">+ add to cart</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="img/product/product_2.png" alt="">
+                                        <img src="img/product/example.jpeg" alt="">
                                         <div class="single_product_text">
-                                            <h4>Quartz Belt Watch</h4>
-                                            <h3>$150.00</h3>
+                                            <h4>Sherlock Holmes</h4>
+                                            <h3>$15.00 €</h3>
                                             <a href="#" class="add_cart">+ add to cart</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="img/product/product_3.png" alt="">
+                                        <img src="img/product/example.jpeg" alt="">
                                         <div class="single_product_text">
-                                            <h4>Quartz Belt Watch</h4>
-                                            <h3>$150.00</h3>
+                                            <h4>Sherlock Holmes</h4>
+                                            <h3>$15.00 €</h3>
                                             <a href="#" class="add_cart">+ add to cart</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="img/product/product_4.png" alt="">
+                                        <img src="img/product/example.jpeg" alt="">
                                         <div class="single_product_text">
-                                            <h4>Quartz Belt Watch</h4>
-                                            <h3>$150.00</h3>
+                                            <h4>Sherlock Holmes</h4>
+                                            <h3>$15.00 €</h3>
                                             <a href="#" class="add_cart">+ add to cart</a>
                                         </div>
                                     </div>
