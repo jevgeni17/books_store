@@ -17,13 +17,21 @@
                             <h3>Welcome Back ! <br>
                                 Please Sign in now</h3>
                             <form class="row contact_form"  method="post" >
+                                <?php
+                                    if(isset($_SESSION['reg-ok'])){
+                                        unset($_SESSION['reg-ok']);
+                                        echo '<div> <p class="text-success ml-4">registration successful</p> </div>';
+                                    }
+                                ?>
                                 <div class="col-md-12 form-group p_star">
                                     <input type="text" class="form-control" id="mail" name="mail" value=""
-                                        placeholder="Username">
+                                        placeholder="email">
                                 </div>
                                 <div class="col-md-12 form-group p_star">
                                     <input type="password" class="form-control" id="pass" name="pass" value=""
                                         placeholder="Password">
+                                </div>
+                                <div id="auth-danger" >
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <button type="submit"  class="btn_3">

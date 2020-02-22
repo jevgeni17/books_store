@@ -29,6 +29,8 @@
                                     <input type="password" class="form-control" id="password-confirm" name="pass-control" value=""
                                         placeholder="re-enter password">
                                 </div>
+                                <div id="auth-danger" >
+                                </div>
                                 <div class="col-md-12 form-group">
                                     <button type="submit"  class="btn_3">
                                         Confirm

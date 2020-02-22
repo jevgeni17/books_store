@@ -14,7 +14,19 @@ if(isset($_POST['mail']) && isset($_POST['pass'])){
 
 	if(count($user) == 0){
 		//header('Refresh: 3; index.php');
-		echo '<div class="alert alert-danger">К сожалению, такого пользователя не существует</div>';
+		//echo '<div class="alert alert-danger">К сожалению, такого пользователя не существует</div>';
+		echo "<script>
+		window.onload = function() {
+
+			what();
+	
+			function what() {
+				document.getElementById('auth-danger').innerHTML = '<p class=\'auth-error text-danger ml-4\'>incorrect email or password</p>';
+			};
+	
+		
+		};</script>";
+
 	}
 
 
