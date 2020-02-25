@@ -27,17 +27,17 @@
                                 <h3>Browse Categories</h3>
                             </div>
                             <div class="widgets_inner">
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">Crime</a>
-                                        <span>(4)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Novels</a>
-                                        <span>(4)</span>
-                                    </li>
-                                   
-                                </ul>
+                            <?php
+                                $categories=mysqli_query($link, "SELECT * FROM categories ORDER BY num");
+                                while($category=mysqli_fetch_assoc($categories)){
+                                    echo '<ul class="list">
+                                            <li>
+                                                <a href="?categories='.$category['category'].'">'.$category['category'].'</a>
+                                                <span>(4)</span>
+                                            </li>
+                                         </ul>';
+                                }
+                            ?>
                             </div>
                         </aside>
 
