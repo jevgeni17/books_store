@@ -13,9 +13,9 @@
                     <div class="single_footer_part">
                         <h4>Quick Links</h4>
                         <ul class="list-unstyled">
-                            <li><a href="">Jobs</a></li>
-                            <li><a href="">Brand Assets</a></li>
-                            <li><a href="">Investor Relations</a></li>
+                            <li><a href="">Lorem Ipsum </a></li>
+                            <li><a href="">Lorem Ipsum s</a></li>
+                            <li><a href="">Lorem Ipsum s</a></li>
                             <li><a href="">Terms of Service</a></li>
                             <li><a href="">Terms of Service</a></li>
                         </ul>
@@ -25,10 +25,10 @@
                     <div class="single_footer_part">
                         <h4>Features</h4>
                         <ul class="list-unstyled">
-                            <li><a href="">Jobs</a></li>
-                            <li><a href="">Brand Assets</a></li>
-                            <li><a href="">Investor Relations</a></li>
-                            <li><a href="">Terms of Service</a></li>
+                            <li><a href="">Lorem Ipsum </a></li>
+                            <li><a href="">Lorem Ipsum </a></li>
+                            <li><a href="">Lorem Ipsum </a></li>
+                            <li><a href="">Lorem Ipsum  </a></li>
                         </ul>
                     </div>
                 </div>
@@ -36,17 +36,17 @@
                     <div class="single_footer_part">
                         <h4>Resources</h4>
                         <ul class="list-unstyled">
-                            <li><a href="">Guides</a></li>
-                            <li><a href="">Research</a></li>
-                            <li><a href="">Experts</a></li>
-                            <li><a href="">Agencies</a></li>
+                            <li><a href="">Lorem Ipsum </a></li>
+                            <li><a href="">Lorem Ipsum </a></li>
+                            <li><a href="">Lorem Ipsum </a></li>
+                            <li><a href="">Lorem Ipsum </a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="single_footer_part">
                         <h4>Newsletter</h4>
-                        <p>Heaven fruitful doesn't over lesser in days. Appear creeping
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <div id="mc_embed_signup">
                             <form target="_blank"

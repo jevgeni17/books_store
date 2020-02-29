@@ -41,60 +41,49 @@ require_once "connect.php";
 
 <body>
 
-<?php if(isset($_GET['exit'])){
-	unset($_SESSION['user']);
-} ?>
+    <?php if(isset($_GET['exit'])){
+        unset($_SESSION['user']);
+    } ?>
     
     <?php if(isset($_SESSION['user']) && isset($_SESSION['user-status']) && $_SESSION['user-status'] == "admin"): ?>
     <?php 
         include 'admin/admin-panel.php';
         if($_GET['page'] == "languages"){
             include 'admin/parts/editLanguages.php';
-        }else{
-
-        }
-        
+        }else{}
     ?>
     <?php else: 
         
-        
+    include 'parts/header.php';
     
-        include 'parts/header.php';
-    
-    
-
     
     if(isset($_GET['login'])){
         require 'scripts/auth/auth.php';
         include 'parts/login.php';
     }
+    if(isset($_GET['cart'])){
+        include 'parts/cart.php';
+    }
     
-
     
     if(isset($_GET['registration'])){
         require_once 'scripts/reg/reg.php';
         include 'parts/registr.php'; 
     }
-    
-    
-    
-        if(isset($_GET['categories-crime'])){
-            include 'parts/all-products.php';
-        }else{
-            include 'parts/best-sellers-carousel.php';
-        }
-    
-    
-        
 
-    
-    
-        include 'parts/footer.php';
-    
-    
-        
-        
-        
+
+    if(isset($_GET['categories'])){
+        if($_GET['categories'] == 'crime'){
+            include 'parts/all-products.php';
+        }elseif($_GET['categories'] == 'novels'){
+            include 'parts/all-products.php';
+        }
+    }else{
+        include 'parts/best-sellers-carousel.php';
+    }
+
+    include 'parts/footer.php';
+       
     ?>
     <?php endif; ?>
 

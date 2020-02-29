@@ -27,17 +27,17 @@
                                 <h3>Browse Categories</h3>
                             </div>
                             <div class="widgets_inner">
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">Crime</a>
-                                        <span>(4)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Novels</a>
-                                        <span>(4)</span>
-                                    </li>
-                                   
-                                </ul>
+                            <?php
+                                $categories=mysqli_query($link, "SELECT * FROM categories ORDER BY num");
+                                while($category=mysqli_fetch_assoc($categories)){
+                                    echo '<ul class="list">
+                                            <li>
+                                                <a href="?categories='.$category['category'].'">'.$category['category'].'</a>
+                                                <span>(4)</span>
+                                            </li>
+                                         </ul>';
+                                }
+                            ?>
                             </div>
                         </aside>
 
@@ -173,15 +173,15 @@
                     <div class="row align-items-center latest_product_inner">       <!-- <i class="ti-heart"></i -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single_product_item">
-                                <img src="img/product/product_1.png" alt="">
+                                <img src="img/goods/sherlock_holmes-novels.jpeg" alt="">
                                 <div class="single_product_text">
                                     <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
+                                    <h3>5 €</h3>
                                     <a href="#" class="add_cart">+ add to cart</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                       <!-- <div class="col-lg-4 col-sm-6">
                             <div class="single_product_item">
                                 <img src="img/product/product_2.png" alt="">
                                 <div class="single_product_text">
@@ -210,7 +210,7 @@
                                     <a href="#" class="add_cart">+ add to cart</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <div class="col-lg-12">
                             <div class="pageination">

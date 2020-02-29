@@ -24,13 +24,14 @@
                                         Categories
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="?categories-crime"> Crime</a>
-                                        <a class="dropdown-item" href="single-product.html">Novels</a>
-                                        
+                                        <?php
+                                            $categories=mysqli_query($link, "SELECT * FROM categories ORDER BY num");
+                                            while($category=mysqli_fetch_assoc($categories)){
+                                                echo '<a class="dropdown-item" href="?categories='.$category['category'].'">'.$category['category'].'</a>';
+                                            }
+                                        ?>
                                     </div>
                                 </li>
-                                
-                                
                                 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
@@ -38,19 +39,20 @@
                                         Contact us
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="category.html"> Feedback</a>
-                                        <a class="dropdown-item" href="single-product.html">Contacts</a>
+                                        <a class="dropdown-item" href="#"> Feedback</a>
+                                        <a class="dropdown-item" href="#">Contacts</a>
                                         
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        English
+                                        Language
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="category.html"> Русский</a>
-                                        <a class="dropdown-item" href="single-product.html">Eesti</a>
+                                        <a class="dropdown-item" href="#"> English</a>
+                                        <a class="dropdown-item" href="#"> Русский</a>
+                                        <a class="dropdown-item" href="#">Eesti</a>
                                         
                                     </div>
                                 </li>
@@ -58,7 +60,7 @@
                         </div>
                         <div class="hearer_icon d-flex">
                             <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                            <a href="?cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                             
                         </div>
                         </div>
