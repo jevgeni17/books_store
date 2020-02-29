@@ -40,7 +40,7 @@
               </tr>
               
               
-              <tr class="bottom_button">
+             <!-- <tr class="bottom_button">
                 <td>
                   <a class="btn_1" href="#">Update Cart</a>
                 </td>
@@ -102,11 +102,11 @@
                     <a class="btn_1" href="#">Update Details</a>
                   </div>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
           <div class="checkout_btn_inner float-right">
-            <a class="btn_1" href="#">Continue Shopping</a>
+           <!-- <a class="btn_1" href="#">Continue Shopping</a> -->
             <a class="btn_1 checkout_btn_1" href="#">Proceed to checkout</a>
           </div>
         </div>

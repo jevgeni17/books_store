@@ -173,15 +173,15 @@
                     <div class="row align-items-center latest_product_inner">       <!-- <i class="ti-heart"></i -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single_product_item">
-                                <img src="img/product/product_1.png" alt="">
+                                <img src="img/goods/sherlock_holmes-novels.jpeg" alt="">
                                 <div class="single_product_text">
                                     <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
+                                    <h3>5 €</h3>
                                     <a href="#" class="add_cart">+ add to cart</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                       <!-- <div class="col-lg-4 col-sm-6">
                             <div class="single_product_item">
                                 <img src="img/product/product_2.png" alt="">
                                 <div class="single_product_text">
@@ -210,7 +210,7 @@
                                     <a href="#" class="add_cart">+ add to cart</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <div class="col-lg-12">
                             <div class="pageination">

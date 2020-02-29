@@ -39,8 +39,8 @@
                                         Contact us
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="category.html"> Feedback</a>
-                                        <a class="dropdown-item" href="single-product.html">Contacts</a>
+                                        <a class="dropdown-item" href="#"> Feedback</a>
+                                        <a class="dropdown-item" href="#">Contacts</a>
                                         
                                     </div>
                                 </li>
@@ -50,9 +50,9 @@
                                         Language
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="category.html"> English</a>
-                                        <a class="dropdown-item" href="category.html"> Русский</a>
-                                        <a class="dropdown-item" href="single-product.html">Eesti</a>
+                                        <a class="dropdown-item" href="#"> English</a>
+                                        <a class="dropdown-item" href="#"> Русский</a>
+                                        <a class="dropdown-item" href="#">Eesti</a>
                                         
                                     </div>
                                 </li>
